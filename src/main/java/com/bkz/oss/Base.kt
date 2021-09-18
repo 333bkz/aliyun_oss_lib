@@ -77,7 +77,7 @@ abstract class Base(
         return Result(code, msg, result?.objectContent?.inputString())
     }
 
-    suspend fun start(): Params {
+    fun start(): Params {
         if (check?.invoke(params) != false) {
             next(params)
         }
