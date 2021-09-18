@@ -84,7 +84,7 @@ abstract class Base(
         return params
     }
 
-    protected abstract suspend fun next(params: Params)
+    protected abstract fun next(params: Params)
 }
 
 fun InputStream.inputString() = BufferedReader(InputStreamReader(this)).useLines { lines ->
