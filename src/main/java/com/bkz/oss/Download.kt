@@ -5,7 +5,7 @@ import com.bkz.oss.Params
 
 class Download(params: Params, context: Context) : Base(params, context) {
 
-    override suspend fun next(params: Params) {
+    override fun next(params: Params) {
         val result = get()
         if (result.code == 200) {
             params.success = true
